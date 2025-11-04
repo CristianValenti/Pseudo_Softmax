@@ -43,7 +43,7 @@ module tt_um_PseudoSM_ASIC
   wire  signed [7:0] Data_in = ui_in[7:0];  // int8
   wire   [3:0] Sel_in = uio_in[3:0];  // ufix4         
   wire  [7:0] Data_out = uo_out[7:0];  // uint8
-  wire _unused = &{ena, 1'b0};
+          wire _unused = &{ena,uio_out,uio_oe, 1'b0};
   wire reset;
   assign reset = ~rst_n;        
 
