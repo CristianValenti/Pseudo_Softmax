@@ -11,13 +11,26 @@ project:        "PseudoSoftmax_ASIC"
   tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
 
   # Your top module name must start with "tt_um_". Make it unique by including your github username:
-  top_module:  "tt_um_example"
+  top_module:  "tt_um_PseudoSM_ASIC"
 
   # List your project's source files here.
   # Source files must be in ./src and you must list each source file separately, one per line.
   # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
   source_files:
-    - "project.v"
+    - "PseudoSM_ASIC.v"
+    - "Reciprocal_PWL.v"
+    - "Input_DEMUX.v"
+    - "Final_sub.v"
+    - "FLP_adder.v"
+    - "stage1_add.v"
+    - "stage1_add1.v"
+    - "stage1_add2.v"
+    - "stage1_add3.v"
+    - "stage1_add4.v"
+    - "stage2_add.v"
+    - "stage2_add1.v"
+    - "stage3_add.v"
+    - "stage4_add.v"
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 # This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
