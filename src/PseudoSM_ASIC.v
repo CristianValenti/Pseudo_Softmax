@@ -38,11 +38,12 @@ module tt_um_PseudoSM_ASIC
 
   input   clk;
   input   reset;
+  input ena;
   input   [3:0] Sel_out;  // ufix4
   input   signed [7:0] Data_in;  // int8
-  input   [3:0] Sel_in;  // ufix4
+  input   [3:0] Sel_in;  // ufix4         
   output  [7:0] Data_out;  // uint8
-
+  wire _unused = &{ena, 1'b0};
 
   reg [3:0] Delay2_out1;  // ufix4
   reg signed [7:0] Delay6_out1;  // int8
