@@ -27,22 +27,22 @@
 `timescale 1 ns / 1 ns
 
 module tt_um_PseudoSM_ASIC
-          (clk,
-           rst_n,
-           Sel_out,
-           Data_in,
-           Sel_in,
-           ena,
-           Data_out);
+          (input  wire [7:0] ui_in,    // Dedicated inputs
+    output wire [7:0] uo_out,   // Dedicated outputs
+    input  wire [7:0] uio_in,   // IOs: Input path
+    output wire [7:0] uio_out,  // IOs: Output path
+    output wire [7:0] uio_oe,   // IOs: Enable path (active high: 0=input, 1=output)
+    input  wire       ena,      // always 1 when the design is powered, so you can ignore it
+    input  wire       clk,      // clock
+    input  wire       rst_n     // reset_n - low to reset
+);
 
 
-  input   clk;
-  input   rst_n;
-  input ena;
-  input   [3:0] Sel_out;  // ufix4
-  input   signed [7:0] Data_in;  // int8
-  input   [3:0] Sel_in;  // ufix4         
-  output  [7:0] Data_out;  // uint8
+
+  wire   [3:0] Sel_out = uio_in[7:4];  // ufix4
+  wire  signed [7:0] Data_in = ui_in[7:0];  // int8
+  wire   [3:0] Sel_in = uio_in[3:0];  // ufix4         
+  wire  [7:0] Data_out = uo_out[7:0];  // uint8
   wire _unused = &{ena, 1'b0};
   wire reset;
   assign reset = ~rst_n;        
