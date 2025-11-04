@@ -1,5 +1,5 @@
 # Tiny Tapeout project information
-project:        "PseudoSoftmax_ASIC"
+project:        
   title:        "PSM_asic"      # Project title
   author:       "Cristian Valenti"      # Your name
   discord:      "elwoodblues9430"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
