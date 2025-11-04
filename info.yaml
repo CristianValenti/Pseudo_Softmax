@@ -64,6 +64,10 @@ pinout:
   uio[5]: "Sel_in[1]"
   uio[6]: "Sel_in[2]"
   uio[7]: "Sel_in[3]"
-
+  
+  #path for sdc files
+ FALLBACK_SDC_FILE: src/SYNcostraints.sdc
+ PNR_SDC_FILE:      src/PNRcostraints.sdc
+ SIGNOFF_SDC_FILE:  src/PNRcostraints.sdc
 # Do not change!
 yaml_version: 6
