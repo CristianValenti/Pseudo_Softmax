@@ -11,7 +11,7 @@
 
   "//": "Here are some of the variables you may want to change:",
 	
-  "DESIGN_NAME": "PseudoSM_ASIC",
+  "DESIGN_NAME": "tt_um_PseudoSM_ASIC",
   "VERILOG_FILES": "dir::rtl/*.v",
 
 
