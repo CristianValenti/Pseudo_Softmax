@@ -335,6 +335,6 @@ module tt_um_PseudoSM_ASIC
     end
 
   assign Data_out = Delay8_out1;
-
+wire _unused = &{ena, 1'b0};
 endmodule  // PseudoSM_ASIC
 
