@@ -32,6 +32,7 @@ module tt_um_PseudoSM_ASIC
            Sel_out,
            Data_in,
            Sel_in,
+           ena,
            Data_out);
 
 
