@@ -26,7 +26,7 @@
 
 `timescale 1 ns / 1 ns
 
-module PseudoSM_ASIC
+module tt_um_PseudoSM_ASIC
           (clk,
            reset,
            Sel_out,
